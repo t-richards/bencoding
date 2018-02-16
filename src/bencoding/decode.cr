@@ -1,4 +1,4 @@
-module BEncoding
+module Bencoding
   alias ObjectType = Hash(String, ObjectType) | Int64 | String | Array(ObjectType)
 
   def self.decode(str : String)

@@ -1,4 +1,4 @@
-module BEncoding
+module Bencoding
   def self.encode(param)
     io = IO::Memory.new
     Encoder.new(io).encode(param)

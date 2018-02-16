@@ -1,12 +1,11 @@
 # bencoding
 
-Crystal library for the bencode data serialization format
+Crystal library for the [Bencoding][bencoding-wiki] data serialization format
 
+## What is bencoding?
 
-## What is bencode?
-
-Bencode is a simple data serialization format used by the popular
-[BitTorrent](http://bittorrent.org/) P2P file sharing system.
+Bencoding is a simple data serialization format used by the popular
+[BitTorrent][bittorrent] P2P file sharing system.
 
 It contains only four data types, namely:
 
@@ -15,37 +14,32 @@ It contains only four data types, namely:
   - lists
   - dictionaries
 
-For more info see [spec](http://www.bittorrent.org/beps/bep_0003.html#bencoding).
-
+For more info see the [bencoding spec][bencoding-spec].
 
 ## Installation
-
 
 Add this to your application's `shard.yml`:
 
 ```yaml
 dependencies:
-  bencoding.cr:
+  bencoding:
     github: t-richards/bencoding
 ```
 
-
 ## Usage
-
 
 ```crystal
 require "bencoding"
 
 # Decoding:
-BEncoding.decode("d3:foo3:bar3:bazi42ee") # => {"foo" => "bar", "baz" => 42}
+Bencoding.decode("d3:foo3:bar3:bazi42ee") # => {"foo" => "bar", "baz" => 42}
 
 # Encoding:
-BEncoding.encode("foo bar") # => "7:foo bar"
-BEncoding.encode(42) # => "i42e"
-BEncoding.encode([1, 2, 3]) # => "li1ei2ei3ee"
-BEncoding.encode({"foo" => 1, "bar" => -10}) # => "d3:bari-10e3:fooi1ee"
+Bencoding.encode("foo bar") # => "7:foo bar"
+Bencoding.encode(42) # => "i42e"
+Bencoding.encode([1, 2, 3]) # => "li1ei2ei3ee"
+Bencoding.encode({"foo" => 1, "bar" => -10}) # => "d3:bari-10e3:fooi1ee"
 ```
-
 
 ## Contributing
 
@@ -59,3 +53,8 @@ BEncoding.encode({"foo" => 1, "bar" => -10}) # => "d3:bari-10e3:fooi1ee"
 
   - [t-richards](https://github.com/t-richards) - Maintainer
   - [Hamdiakoguz](https://github.com/Hamdiakoguz) Hamdi Akoğuz - creator
+
+
+[bencoding-wiki]: https://en.wikipedia.org/wiki/Bencode
+[bencoding-spec]: http://www.bittorrent.org/beps/bep_0003.html#bencoding
+[bittorrent]: http://www.bittorrent.org/
