@@ -1,7 +1,8 @@
-name: bencoding.cr
-version: 0.1.0
+name: bencoding
+version: 0.2.0
 
 authors:
+  - Tom Richards <tom@tomrichards.net>
   - Hamdi Akoğuz <hamdiakoguz@gmail.com>
 
 license: MIT
