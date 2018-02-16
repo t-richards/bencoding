@@ -1,5 +1,7 @@
 # bencoding
 
+[![Build Status](https://travis-ci.org/t-richards/bencoding.svg?branch=master)](https://travis-ci.org/t-richards/bencoding)
+
 Crystal library for the [Bencoding][bencoding-wiki] data serialization format
 
 ## What is bencoding?
