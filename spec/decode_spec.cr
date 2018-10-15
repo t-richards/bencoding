@@ -36,6 +36,10 @@ describe Bencoding do
     Bencoding.decode("d3:foo3:bar3:baz3:quxe").should eq({"foo" => "bar", "baz" => "qux"})
   end
 
+  it "decodes file" do
+    Bencoding.load_file("#{__DIR__}/fixtures/alice.torrent").should_not eq(nil)
+  end
+
   it "handles invalid dictionaries" do
     expect_raises Bencoding::DecodeError do
       Bencoding.decode("d3")

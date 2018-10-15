@@ -9,6 +9,12 @@ module Bencoding
     Decoder.from(io).decode
   end
 
+  def self.load_file(path : String)
+    File.open(path) do |io|
+      Decoder.from(io).decode
+    end
+  end
+
   class Decoder
     getter io : IO
     @current : Char?
