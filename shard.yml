@@ -1,6 +1,11 @@
 name: bencoding
 version: 1.0.0
 
+description: |
+  Crystal library for the Bencoding data serialization format
+
+crystal: 0.26.1
+
 authors:
   - Tom Richards <tom@tomrichards.net>
   - Hamdi Akoğuz <hamdiakoguz@gmail.com>
